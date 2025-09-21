@@ -64,6 +64,10 @@ GRANT USAGE, CREATE AGENT ON SCHEMA SNOWFLAKE_INTELLIGENCE.AGENTS TO ROLE AI_ENG
 -- Grant privileges to use GitHub repository
 GRANT READ ON GIT REPOSITORY GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS TO ROLE AI_ENGINEER;
 
+-- Grant AI_ENGINEER role to current user
+set current_user = (select current_user());
+grant role AI_ENGINEER to user identifier($current_user);
+
 -- Setup Custom Tools for Agents
 EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/setup/setup_custom_tools.sql;
 
