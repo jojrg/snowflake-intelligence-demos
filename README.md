@@ -5,7 +5,7 @@ Welcome to your gateway for exploring Snowflake's cutting-edge AI capabilities!
 This repository offers an intuitive, beginner-friendly introduction to __Snowflake Cortex Agents__ and __Snowflake Intelligence__.
 
 <b>What You'll Find Here:</b>
-* Multiple real-world use cases located in the [use_cases](https://github.com/michaelgorkow/snowflake_cortex_agents_demo/tree/main/use_cases) folder (I plan to add more over time)
+* Multiple real-world use cases located in the [use_cases](https://github.com/michaelgorkow/snowflake-intelligence-demos/tree/main/use_cases) folder (I plan to add more over time)
 * Interactive Snowflake Notebooks with explanations that walk you through each setup step-by-step
 * Quick deployment - get any use case running with just one SQL command in under five minutes
 
@@ -23,7 +23,7 @@ This secure sandbox environment allows you to:
 * Experiment freely with no access to production data
 * Focus on learning and innovation in a controlled setting
 
-The user and role setup is done by executing the [setup.sql](https://github.com/michaelgorkow/snowflake_cortex_agents_demo/tree/main/setup.sql).  
+The user and role setup is done by executing the [setup.sql](https://github.com/michaelgorkow/snowflake-intelligence-demos/blob/main/setup/setup.sql).  
 Check this file if you want to know exactly what privileges are granted.
 
 The `AI_ENGINEER role` will have access to the following resources:
