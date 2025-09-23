@@ -1,0 +1,5 @@
+name: app_environment
+channels:
+  - snowflake
+dependencies:
+  - faker=37.3.0
