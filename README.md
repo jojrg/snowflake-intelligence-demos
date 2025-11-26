@@ -67,6 +67,10 @@ CREATE GIT REPOSITORY GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS
 
 -- Run the installation of the Demo
 EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/setup/setup.sql;
+
+-- Grant AI_ENGINEER role to current user
+set current_user = (select current_user());
+grant role AI_ENGINEER to user identifier($current_user);
 ```
 
 ## Deploy Demo Use Cases
