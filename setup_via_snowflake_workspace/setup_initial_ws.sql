@@ -40,6 +40,10 @@ EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE
   USING (BRANCH => 'energy_company_enhancements', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
 
 
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS_JOJRG/branches/energy_company_enhancements/use_cases/The_Energy_Company/setup/setup.sql
+  USING (BRANCH => 'energy_company_enhancements', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
+
+
 -- Add ons required 
 -- For syncing execution github repo stage object in snowflake with latest code changes
 -- To find your repo name first
