@@ -89,7 +89,7 @@ def generate_energy_provider_data(session, num_customers: int, start_date: datet
     solar_customers = set(contracts_df[contracts_df['SERVICE_TYPE'] == 'solar panel lease']['CUSTOMER_ID'])
     all_residential_ids = list(customers_df[customers_df['CUSTOMER_TYPE'] == 'residential']['CUSTOMER_ID'])
     anomaly_customers = set(random.sample(all_residential_ids, k=min(15, len(all_residential_ids))))
-    anomaly_spike_date = datetime(2025, 8, 15)
+    anomaly_spike_date = start_date + timedelta(days=int((end_date - start_date).days * 0.5))
     customer_types = customers_df.set_index('CUSTOMER_ID')['CUSTOMER_TYPE'].to_dict()
     date_range = pd.date_range(start=start_date, end=end_date, freq='D')
 
